@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Implement method Filter
+ * Implement method Every
  */
 function applyCustomEvery() {
   [].__proto__.every2 = function() {
