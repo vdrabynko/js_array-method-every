@@ -10,6 +10,11 @@ test('every2 is added to [].__proto__', () => {
     .toBeInstanceOf(Function);
 });
 
+test(`every2 doesn't call default every`, () => {
+  expect([].every2.toString().includes('.every('))
+    .toBe(false);
+});
+
 test('for (item) => item > 10', () => {
   expect(source.every2(x => x > 10))
     .toBe(false);
